@@ -1,0 +1,20 @@
+#include <iostream>
+
+float base;
+float altura;
+float naa;
+
+using namespace std;
+
+int main()
+{
+    cout << "Ingrese la base: "<<endl;
+    cin  >> base;
+    cout << "Ingrese la altura: "<<endl;
+    cin >> altura;
+    naa = (base * altura) / 2;
+    cout << "El area de su triangulo es: " << naa << endl;
+
+
+    return 0;
+}
