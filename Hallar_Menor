@@ -1,0 +1,28 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int min(int a, int b);
+
+int main()
+{
+    int x, y;
+    int r;
+    cout << "Escriba dos numeros: \n";
+    cin >> x>> y;
+    r= min(x, y);
+    cout << "El menor de estos numeros es: " << r << endl;
+
+    return 0;
+}
+
+int min(int a, int b) {
+    int menor;
+    if (a < b) {
+        menor = a;
+    }
+    else {
+        menor = b;
+    }
+    return menor;
+}
