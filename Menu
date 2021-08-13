@@ -1,0 +1,41 @@
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+    float a, b, r;
+    int opcion;
+    cout << "Ingrese el primer dígito: ";
+    cin >> a;
+    cout << "Ingrese el segundo dígito: ";
+    cin >> b;
+    do {
+        cout << endl << "          MENU" << endl;
+        cout << endl;
+        cout << "1.- Suma" << endl;
+        cout << "2.- Resta" << endl;
+        cout << "3.- Producto" << endl;
+        cout << "4.- División" << endl;
+        cout << "5.- Potencia" << endl;
+        cout << "6.- Raíz" << endl;
+        cout << "0.- Salir" << endl;
+        cout << "Elige una opción: ";
+        cin >> opcion;
+        switch (opcion) {
+        case 1: r = a + b; break;
+        case 2: r = a - b; break;
+        case 3: r = a * b; break;
+        case 4: r = a / b; break;
+        case 5: r = pow(a, b); break;
+        case 6: r = sqrt(a); break;
+        case 0:cout << "Salir";
+        default: cout << " " << endl;
+        }
+        if ((opcion >= 1) && (opcion <= 6))
+            cout << "El resultado es " << r << endl;
+    } while (opcion != 0);
+    return 0;
+}
