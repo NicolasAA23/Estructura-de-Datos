@@ -1,0 +1,61 @@
+#include "stdafx.h"
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+void menu();
+float op(int opcion);
+
+int main ()
+{
+	 float r;
+	 int opcion;
+
+   do { menu();
+		cin >> opcion;
+     
+     r=op(opcion);
+
+     if ((opcion>=1)&&(opcion<=6)) 
+     	cout << "El resultado es: " << r << endl;
+   } while (opcion != 0);
+   system("pause");
+	return 0;
+}
+void menu(){
+cout << endl<< "<<<<<<< Calculadora Area >>>>>>>"<<endl;
+	 cout << endl<< "Menu: "<<endl;
+	 cout<<endl;
+     cout << "1.- Area triangulo" << endl;
+     cout << "2.- Area circulo" << endl;
+     cout << "3.- Area Cuadrado" << endl;
+	 cout << "4.- Area Rectangulo" << endl;
+	 cout << "5.- Calcular una potencia" << endl;
+	 cout << "6.- Calcular una raiz" << endl;
+     cout << "0.- Salir" << endl;
+     cout << "Elige una opcion: " ;
+}
+float op(int opcion){
+	float a, b, r; const float PI=3.1416;
+	switch (opcion) {
+	    case 1: cout << "Ingrese base: " ;cin >> a;
+				cout << "Ingrese altura: " ;cin >> b;
+				r=(b*a)/2; break;
+	    case 2: cout << "Ingrese radio: " ;cin >> a;
+				r = pow(a,2)*PI; break;
+	    case 3:	cout << "Ingrese lado: " ;cin >> a;
+				r = pow(a,2); break;
+		case 4: cout << "Ingrese base: " ;cin >> a;
+				cout << "Ingrese altura: " ;cin >> b;
+				r=b*a; break;
+		case 5: cout << "Ingrese base: " ;cin >> a;
+				cout << "Ingrese exponente: " ;cin >> b;
+				r=pow(a,b); break;
+		case 6:	cout << "Ingrese un numero: " ;cin >> a;
+				r = sqrt(a); break;
+		case 0: cout << "Salir";break;
+	    default: cout << "Opcion invalida" << endl;
+     }
+	return r;
+}
